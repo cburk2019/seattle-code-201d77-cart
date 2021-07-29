@@ -17,7 +17,6 @@ function populateForm() {
   for (let product of Product.allProducts) {
     let optionElement = document.createElement('option');
     optionElement.textContent = product.name;
-    optionElement.value = product.name;
     selectElement.appendChild(optionElement);
   }
 
@@ -33,7 +32,7 @@ function handleSubmit(event) {
 
   /// --------------- at this point you know which item was picked from the list, how many ----------- ///
   const t = event.target;
-  const productName = t.value;
+  const productName = t.items.value;
   const productQuantity = t.quantity.value;
 
   // Do all the things ...
@@ -66,6 +65,7 @@ function updateCartPreview() {
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
 const catalogForm = document.getElementById('catalog');
+
 catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
