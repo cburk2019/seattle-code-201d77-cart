@@ -17,6 +17,7 @@ function populateForm() {
   for (let product of Product.allProducts) {
     let optionElement = document.createElement('option');
     optionElement.textContent = product.name;
+    optionElement.value = product.name;
     selectElement.appendChild(optionElement);
   }
 
@@ -27,9 +28,16 @@ function populateForm() {
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
 
-  // TODO: Prevent the page from reloading
+  // TODO(done): Prevent the page from reloading
+  event.preventDefault();
+
   /// --------------- at this point you know which item was picked from the list, how many ----------- ///
+  const t = event.target;
+  const productName = t.value;
+  const productQuantity = t.quantity.value;
+
   // Do all the things ...
+
   addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
