@@ -1,1 +1,137 @@
 /* TODO: Make it awesome */
+
+body {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 1080px;
+  display: block;
+  border: thin solid black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1%;
+  /* border: thin ridge black; */
+}
+header h1 {
+  font-size: 2em;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+nav {
+  width: 25%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: orange; */
+}
+nav ul {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: red; */
+}
+nav ul li {
+  width: 35%;
+  display: flex;
+  border: thin solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: blue;
+  padding: 10px;
+  font-size: 1.1em;
+}
+a:hover {
+  color: lightblue;
+}
+a:visited {
+  color: red;
+}
+
+.col-1 {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
+  padding-left: 2%;
+  font-size: 1.1em;
+}
+
+.col-2 {
+  /* background-color: red; */
+  border: thin solid black;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  /* background-color: hotpink; */
+  /* border: thin solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.copy {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+}
+
+#catalog {
+  /* background-color: red; */
+  display: flex;
+
+}
+
+#catalog legend {
+  font-size: 2em;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#catalog fieldset {
+  /* background-color: green; */
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+fieldset label {
+  font-size: 1.2em;
+  margin-right: 30px;
+}
+
+input, #items {
+  background-color: whitesmoke;
+}
+
+
+
+footer {
+  /* background-color: yellow; */
+  padding-left: 2%;
+  display: flex;
+  justify-content: left;
+  font-style: italic;
+}
