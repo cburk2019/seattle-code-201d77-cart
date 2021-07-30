@@ -1,5 +1,7 @@
 'use strict';
 
+const cartKey = 'cart'
+
 // Cart constructor.
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -14,6 +16,11 @@ Cart.prototype.addItem = function(product, quantity) {
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  // use pseudo-code
+  // get all things in the cart
+  // stringify the array
+  const stringifiedCart = JSON.stringify(this.items);
+  localStorage.setItem(cartKey, stringifiedCart);
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -26,6 +33,29 @@ const CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
 };
+
+
+
+
+// create a function that gets the cart's total quantity
+Cart.prototype.totalCartQuantity = function() {
+
+  let totalQuantity = 0;
+
+  for (let cartItem of this.items) {
+    // we need to count every item
+
+    totalQuantity = totalQuantity + cartItem.quantity;
+    // totalQuantity += cartItem.quantity;
+    // this does the same thing as line above
+  }
+  return totalQuantity;
+
+}
+
+
+
+
 
 // Product contructor.
 const Product = function(filePath, name) {
